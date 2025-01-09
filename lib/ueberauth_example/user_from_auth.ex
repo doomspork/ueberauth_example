@@ -21,10 +21,6 @@ defmodule UeberauthExample.UserFromAuth do
     {:ok, basic_info(auth)}
   end
 
-  # github does it this way
-  defp avatar_from_auth(%{info: %{urls: %{avatar_url: image}}}), do: image
-
-  # facebook does it this way
   defp avatar_from_auth(%{info: %{image: image}}), do: image
 
   # default case if nothing matches
